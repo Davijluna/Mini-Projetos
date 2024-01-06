@@ -7,9 +7,22 @@
 
 // Obtendo um número aleatório entre zero e um
 
-function getRandom() {
-  return Math.random()
+// function getRandom() {
+//   return Math.random()
+// }
+
+// console.log(getRandom())
+
+// Obtendo um número aleatório entre dois valores
+
+function getRandomArbitrary(min, max) {
+  return Math.random() * (max - min) + min
 }
 
-console.log(getRandom())
+
+let number = 7.9
+
+console.log(Math.floor(number), 'TESTE')
+
+console.log(getRandomArbitrary(1, 5))
 
