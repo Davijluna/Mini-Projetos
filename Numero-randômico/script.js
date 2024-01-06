@@ -13,16 +13,20 @@
 
 // console.log(getRandom())
 
-// Obtendo um número aleatório entre dois valores
+// Obtendo um número aleatório entre dois valores.
+// Obtendo números inteiros sobre dois números.
 
 function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min
+  let maxNumber = Math.ceil(max);
+  let minNumber = Math.floor(min)
+  return Math.floor(Math.random() * (maxNumber - minNumber) + minNumber)
 }
 
 
-let number = 7.9
+// let number = 7.9
 
-console.log(Math.floor(number), 'TESTE')
+// console.log(Math.floor(number), 'TESTE')
 
-console.log(getRandomArbitrary(1, 5))
+console.log(getRandomArbitrary(1, 5000))
+
 
