@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <title>Login - Controle de gastos</title>
 </head>
 
@@ -14,45 +13,58 @@
       <div>
         <label for="">Email</label>
       </div>
-      <input type="email" name="email" id="email" placeholder="seu@email.com" onchange='validateFirlds()'>
+      <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="validateFirlds()">
     </div>
     <div>
       <div>
         <label for="">Senha</label>
       </div>
-      <input type="password" name="" id="">
+      <input type="password" placeholder="Senha" name="" id="password" onchange="validateFirlds()">
     </div>
     <div>
       <button type="button" class="clear" id="recover-password-button" disabled="true">Recuperar senha</button>
     </div>
     <div>
-      <button type="button" class="solid" disabled="true">Entrar</button>
+      <button type="button" class="solid" id="login-button" disabled="true">Entrar</button>
     </div>
     <div>
       <button type="button" class="outline">Registrar</button>
     </div>
-
+    
   </form>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function validateFirlds() {
+      const emailValid = isEmailValid();
+      document.getElementById('recover-password-button').disabled = !emailValid;
+
+      const passwordValid = isPasswordValid();
+      document.getElementById('login-button').disabled = !emailValid || !passwordValid;
+    }
+
+    function isEmailValid() {
+      const email = document.getElementById("email").value;
+      if (!email) {
+        console.log('passei aqui !!!!')
+        return false;
+      }
+      return validateEmail(email);
+    }
+
+    function isPasswordValid() {
+      const password = document.getElementById('password').value;
+      if(!password) {
+        return false;
+      }
+      return true;
+    }
+
+    function validateEmail(email) {
+      return /\S+@\S+\.\S+/.test(email);
+    }
+
+  </script>
 </body>
-<script>
-  function validateFirlds() {
-  const emailValid = isEmailValid();
-  document.getElementById('recover-password-button').disabled = !emailValid;
-  }
-
-  function isEmailValid() {
-    const email = document.getElementById("email").value;
-    if (!email) {
-      return false;
-    } 
-      return validaEmail(email);
-  }
-
-  function validaEmail(email) {
-    return /\S+@\S+\.\S+/.test(email);
-  }
-
-</script>
 
 </html>
 
