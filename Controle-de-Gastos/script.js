@@ -1,1 +1,1 @@
-console.log("Hello Word!!!")
+console.log((0.0 + 7.1) /2)

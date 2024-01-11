@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>Login - Controle de gastos</title>
 </head>
+
 <body>
   <form action="exemplo.html">
     <div>
       <div>
         <label for="">Email</label>
       </div>
-      <input type="email" name="email" id="" placeholder="seu@email.com">
+      <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="validateFirlds()">
     </div>
     <div>
       <div>
@@ -21,10 +23,10 @@
       <input type="password" name="" id="">
     </div>
     <div>
-      <button type="button" class="clear">Recuperar senha</button>
+      <button type="button" class="clear" id="recover-password-button"" disabled="true">Recuperar senha</button>
     </div>
     <div>
-      <button type="button" class="solid">Entrar</button>
+      <button type="button" class="solid" disabled="true">Entrar</button>
     </div>
     <div>
       <button type="button" class="outline">Registrar</button>
@@ -32,6 +34,23 @@
 
   </form>
 </body>
+<script>
+  function validateFirlds() {
+   const email = document.geElementById("email").value
+   if (!email) {
+    document.getElementById("recover-password-button").disabled = true;
+   } else if (validaEmail(email)){
+    document.getElementById("recover-password-button").disabled = false;
+   } else {
+    document.getElementById("recover-password-button").disabled = true;
+   }
+  }
+
+  function validaEmail(email) {
+    return /\S+@\S+\.\S+/.test(email);
+  }
+</script>
+
 </html>
 
 <!-- http://127.0.0.1:5500/Mini-Projetos/Controle-deGastos/index.html -->
