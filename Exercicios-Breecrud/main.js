@@ -1,5 +1,6 @@
 // ** Link do beecrowd.
 // https://www.beecrowd.com.br/judge/pt/categories
+// https://www.youtube.com/watch?v=NqY-dkrt0cc&list=PLDgemkIT111D6IXfUr5CTNLWL9ouD8xfG&index=15
 
 "use strict"
 
