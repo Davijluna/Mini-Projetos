@@ -1,3 +1,6 @@
+// ** Link do beecrowd.
+// https://www.beecrowd.com.br/judge/pt/categories
+
 "use strict"
 
 const getProblem = () => document.getElementById('problem')
