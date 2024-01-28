@@ -9,17 +9,20 @@
 
 <body>
   <form action="exemplo.html">
-    <div>
+    <div class="Input-email">
       <div>
         <label for="">Email</label>
       </div>
-      <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="validateFirlds()">
+      <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="onChangeEmail()">
+      <div class="Error" id="email-required-error">Email é obrigatório</div>
+      <div class="Error" id="email-invalid-error">Emaio inválido</div>
     </div>
     <div>
       <div>
         <label for="">Senha</label>
       </div>
-      <input type="password" placeholder="Senha" name="" id="password" onchange="validateFirlds()">
+      <input type="password" placeholder="Senha" name="senha" id="password" onchange="onChangPassword()">
+      <div class="Error" id="password-required-error">Senha é obrigatória</div>
     </div>
     <div>
       <button type="button" class="clear" id="recover-password-button" disabled="true">Recuperar senha</button>
