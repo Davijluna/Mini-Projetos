@@ -5,7 +5,7 @@ let valor2 = B;
 let valor3 = C;
 const arrayValor = [valor1, valor2, valor3]
 
-console.log(typeof arrayValor[0])
+// console.log(typeof arrayValor[0])
 
 let maiorValor = 0;
 for (let i = 0; i < arrayValor.length; i += 1) {

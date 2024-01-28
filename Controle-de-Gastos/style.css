@@ -3,7 +3,7 @@
 } */
 
 body {
-  background-color: rgb(45, 211, 111);
+  background-color: rgb(4, 201, 76);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,8 +29,8 @@ button:active {
 }
 
 button[disabled] {
-  background-color: blue;
-  opacity: 0.1;
+  background-color: rgb(239, 239, 244);
+  opacity: 1.0;
 }
 
 .clear {
@@ -42,7 +42,7 @@ button[disabled] {
 .solid {
   background: white;
   border: none;
-  color: rgb(45, 211, 111)
+  color: rgb(4, 201, 76)
 }
 
 .outline {
