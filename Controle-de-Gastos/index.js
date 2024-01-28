@@ -13,11 +13,11 @@ function onChangeEmail() {
 }
 
 function login() {
-  window.location.href = "Home.html";
+  window.location.href = "page/home/Home.html";
 }
 
 function register() {
-  window.location.href = "register.html";
+  window.location.href = "page/register/register.html";
 }
 
 function isEmailValid() {
