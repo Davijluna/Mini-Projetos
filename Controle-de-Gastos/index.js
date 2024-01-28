@@ -13,7 +13,7 @@ function onChangeEmail() {
 }
 
 function isEmailValid() {
-  const email = document.getElementById("email").value;
+  const email = form.email().value;
   if (!email) {
     return false;
   }
@@ -21,7 +21,7 @@ function isEmailValid() {
 }
 
 function isPasswordValid() {
-  const password = document.getElementById('password').value;
+  const password = form.password().value;
   if(!password) {
     return false;
   }
@@ -34,33 +34,43 @@ function validateEmail(email) {
 
 
 function toggleEmailErrors() {
-   const email = document.getElementById('email').value;
+   const email = form.email().value;
    if (!email) {
-    document.getElementById('email-required-error').style.display = "block";
+    form.emailRequiredError().style.display = "block";
    } else {
-    document.getElementById('email-required-error').style.display = "none";
+    form.emailRequiredError().style.display = "none";
    }
 
    if (validateEmail(email)) {
-    document.getElementById('email-invalid-error').style.display = "none";
+    form.emailInValidError().style.display = "none";
    } else {
-    document.getElementById('email-invalid-error').style.display = "block"
+    form.emailInValidError().style.display = "block"
    }
 }
 
 function togglePasswordErros() {
-  const password = document.getElementById('password').value;
+  const password = form.password().value;
   if (!password) {
-    document.getElementById('password-required-error').style.display = "block";
+    form.passwordRequiredError().style.display = "block";
   } else {
-    document.getElementById('password-required-error').style.display = "none";
+    form.passwordRequiredError().style.display = "none";
   }
  }
 
 function toggleButtonsDisable() {
   const emailValid = isEmailValid();
-  document.getElementById('recover-password-button').disabled = !emailValid;
+  form.recoverPassword().disabled = !emailValid;
 
   const passwordValid = isPasswordValid();
-  document.getElementById('login-button').disabled = !emailValid || !passwordValid;
+  form.loginButton().disabled = !emailValid || !passwordValid;
+}
+
+const form = {
+  email: () => document.getElementById('email'),
+  emailInValidError: () => document.getElementById('email-invalid-error'),
+  emailRequiredError: () => document.getElementById('email-required-error'),
+  loginButton: () => document.getElementById('login-button'),
+  password: () => document.getElementById('password'),
+  passwordRequiredError: () => document.getElementById('password-required-error'),
+  recoverPassword: () => document.getElementById('recover-password-button'),
 }
