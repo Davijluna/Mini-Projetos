@@ -10,15 +10,15 @@
 <body>
   <form action="exemplo.html">
     <div class="Input-email">
-      <div>
+      <div class="form-field">
         <label for="">Email</label>
       </div>
       <input type="email" name="email" id="email" placeholder="seu@email.com" onchange="onChangeEmail()">
-      <div class="Error" id="email-required-error">Email é obrigatório</div>
-      <div class="Error" id="email-invalid-error">Emaio inválido</div>
+      <div class="Error" id="email-required-error" class="form-field">Email é obrigatório</div>
+      <div class="Error" id="email-invalid-error" class="form-field">Email inválido</div>
     </div>
     <div>
-      <div>
+      <div class="form-field">
         <label for="">Senha</label>
       </div>
       <input type="password" placeholder="Senha" name="senha" id="password" onchange="onChangPassword()">
@@ -36,7 +36,9 @@
     
   </form>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="global.css">
   <script src="index.js"></script>
+  <script src="validationsEmail.js"></script>
 </body>
 
 </html>

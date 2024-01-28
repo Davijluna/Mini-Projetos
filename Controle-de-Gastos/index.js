@@ -28,33 +28,35 @@ function isPasswordValid() {
   return true;
 }
 
-function validateEmail(email) {
-  return /\S+@\S+\.\S+/.test(email);
-}
+
 
 
 function toggleEmailErrors() {
    const email = form.email().value;
-   if (!email) {
-    form.emailRequiredError().style.display = "block";
-   } else {
-    form.emailRequiredError().style.display = "none";
-   }
-
-   if (validateEmail(email)) {
-    form.emailInValidError().style.display = "none";
-   } else {
-    form.emailInValidError().style.display = "block"
-   }
+   form.emailRequiredError().style.display = email ? "none" : "block";
+  //  if (!email) {
+  //   form.emailRequiredError().style.display = "block";
+  //  } else {
+  //   form.emailRequiredError().style.display = "none";
+  //  }
+    form.emailInValidError().style.display = validateEmail(email) ? "none" : "block";
+  //  if (validateEmail(email)) {
+  //   form.emailInValidError().style.display = "none";
+  //  } else {
+  //   form.emailInValidError().style.display = "block"
+  //  }
 }
 
 function togglePasswordErros() {
   const password = form.password().value;
-  if (!password) {
-    form.passwordRequiredError().style.display = "block";
-  } else {
-    form.passwordRequiredError().style.display = "none";
-  }
+
+  form.passwordRequiredError().style.display = password ? "none" : "block";
+
+  // if (!password) {
+  //   form.passwordRequiredError().style.display = "block";
+  // } else {
+  //   form.passwordRequiredError().style.display = "none";
+  // }
  }
 
 function toggleButtonsDisable() {
