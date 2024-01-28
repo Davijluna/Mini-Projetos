@@ -12,6 +12,14 @@ function onChangeEmail() {
   //  ! togglePasswordErros() "foi removido "
 }
 
+function login() {
+  window.location.href = "Home.html";
+}
+
+function register() {
+  window.location.href = "register.html";
+}
+
 function isEmailValid() {
   const email = form.email().value;
   if (!email) {
