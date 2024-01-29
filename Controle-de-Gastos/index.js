@@ -13,7 +13,24 @@ function onChangeEmail() {
 }
 
 function login() {
-  window.location.href = "page/home/Home.html";
+  firebase.auth().signInWithEmailAndPassword(
+    form.email().value, form.password().value
+    ).then(response => {
+    window.location.href = "page/home/Home.html";
+  }).catch(error => {
+    alert(getErrorMessage(error));
+  })
+  // console.log('antes')
+  // console.log('depois')
+  // 
+}
+
+function getErrorMessage(error) {
+  if (error.code == 'auth/invalid-credential') {
+    return "Usuário não encontrado"
+  } else {
+    return error.message;
+  }
 }
 
 function register() {
