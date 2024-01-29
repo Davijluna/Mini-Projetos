@@ -13,11 +13,14 @@ function onChangeEmail() {
 }
 
 function login() {
+  showLoading();
   firebase.auth().signInWithEmailAndPassword(
     form.email().value, form.password().value
     ).then(response => {
+      hideLoading();
     window.location.href = "page/home/Home.html";
   }).catch(error => {
+      hideLoading();
     alert(getErrorMessage(error));
   })
   // console.log('antes')
@@ -34,6 +37,7 @@ function getErrorMessage(error) {
 }
 
 function register() {
+  // showLoading();
   window.location.href = "page/register/register.html";
 }
 
