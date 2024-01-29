@@ -39,6 +39,28 @@
   <link rel="stylesheet" href="global.css">
   <script src="index.js"></script>
   <script src="validationsEmail.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.2/firebase-auth-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBIt4z1-GdNel-4xawfOwxYXFBpu_xgRe0",
+      authDomain: "controle-de-gastos-b4965.firebaseapp.com",
+      projectId: "controle-de-gastos-b4965",
+      storageBucket: "controle-de-gastos-b4965.appspot.com",
+      messagingSenderId: "51258587577",
+      appId: "1:51258587577:web:484f69509d381f94c65e68"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+
+  console.log('antes')
+  firebase.auth().signInWithEmailAndPassword("davijluna@gmail.com", "82523614").then(response => {
+    console.log('sucesso', response)
+  }).catch(error => {
+    console.log('error', error)
+  })
+  console.log('depois')
+  </script>
 </body>
 
 </html>
