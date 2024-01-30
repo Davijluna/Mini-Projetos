@@ -16,10 +16,10 @@ function login() {
   showLoading();
   firebase.auth().signInWithEmailAndPassword(
     form.email().value, form.password().value
-    ).then(response => {
+    ).then(()=> {
       hideLoading();
     window.location.href = "page/home/Home.html";
-  }).catch(error => {
+  }).catch((error) => {
       hideLoading();
     alert(getErrorMessage(error));
   })
@@ -29,11 +29,10 @@ function login() {
 }
 
 function getErrorMessage(error) {
-  if (error.code == 'auth/invalid-credential') {
+  if (error.code == "auth/user-not-found") {
     return "Usuário não encontrado"
-  } else {
+  } 
     return error.message;
-  }
 }
 
 function register() {
@@ -41,13 +40,41 @@ function register() {
   window.location.href = "page/register/register.html";
 }
 
+function recoverPassword() {
+  showLoading();
+  firebase.auth().sendPasswordResetEmail(form.email().value).then(() => {
+    hideLoading();
+    alert('Email enviado com sucesso');
+  }).catch((error) => {
+    hideLoading();
+    alert(getErrorMessage(error));
+  });
+}
+
+
+function toggleEmailErrors() {
+  const email = form.email().value;
+  form.emailRequiredError().style.display = email ? "none" : "block";
+  //  if (!email) {
+    //   form.emailRequiredError().style.display = "block";
+    //  } else {
+      //   form.emailRequiredError().style.display = "none";
+      //  }
+  form.emailInValidError().style.display = validateEmail(email) ? "none" : "block";
+//  if (validateEmail(email)) {
+  //   form.emailInValidError().style.display = "none";
+  //  } else {
+    //   form.emailInValidError().style.display = "block"
+    //  }
+  }
+        
 function isEmailValid() {
   const email = form.email().value;
   if (!email) {
     return false;
   }
   return validateEmail(email);
-}
+  }
 
 function isPasswordValid() {
   const password = form.password().value;
@@ -55,26 +82,7 @@ function isPasswordValid() {
     return false;
   }
   return true;
-}
-
-
-
-
-function toggleEmailErrors() {
-   const email = form.email().value;
-   form.emailRequiredError().style.display = email ? "none" : "block";
-  //  if (!email) {
-  //   form.emailRequiredError().style.display = "block";
-  //  } else {
-  //   form.emailRequiredError().style.display = "none";
-  //  }
-    form.emailInValidError().style.display = validateEmail(email) ? "none" : "block";
-  //  if (validateEmail(email)) {
-  //   form.emailInValidError().style.display = "none";
-  //  } else {
-  //   form.emailInValidError().style.display = "block"
-  //  }
-}
+  }
 
 function togglePasswordErros() {
   const password = form.password().value;

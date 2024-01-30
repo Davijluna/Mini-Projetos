@@ -14,4 +14,5 @@ function hideLoading() {
   if (loading.length) {
     loading[0].remove();
   }
+
 }
