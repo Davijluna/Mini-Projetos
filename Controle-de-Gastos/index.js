@@ -16,12 +16,12 @@ function login() {
   showLoading();
   firebase.auth().signInWithEmailAndPassword(
     form.email().value, form.password().value
-    ).then(()=> {
-      hideLoading();
+    ).then(() => {
+      hideLoading()
     window.location.href = "page/home/Home.html";
   }).catch((error) => {
       hideLoading();
-    alert(getErrorMessage(error));
+    getErrorMessage(error);
   })
   // console.log('antes')
   // console.log('depois')
@@ -30,12 +30,7 @@ function login() {
    // ! corrigir bug de recuperação de senha
 }
 
-function getErrorMessage(error) {
-  if (error.code == "auth/user-not-found") {
-    return "Usuário não encontrado"
-  } 
-    return error.message;
-}
+
 
 function register() {
   // showLoading();
@@ -43,14 +38,27 @@ function register() {
 }
 
 function recoverPassword() {
-  showLoading();
+    showLoading();
+
   firebase.auth().sendPasswordResetEmail(form.email().value).then(() => {
     hideLoading();
-    alert('Email enviado com sucesso');
+    alert("Email enviado com sucesso");
   }).catch((error) => {
     hideLoading();
-    alert(getErrorMessage(error));
+    const errorMessage = getErrorMessage(error);
+    if (errorMessage === "Usuário não encontrado") {
+      alert("O usuário associado a este e-mail não foi encontrado."); // !solução do chatGPT mas não resolveu.
+    } else {
+      alert(errorMessage)
+    }
   });
+}
+
+function getErrorMessage(error) {
+  if (error.code == "auth/user-not-found") {
+    return "Usuário não encontrado"
+  } 
+    return error.message;
 }
 
 
@@ -90,7 +98,6 @@ function togglePasswordErros() {
   const password = form.password().value;
 
   form.passwordRequiredError().style.display = password ? "none" : "block";
-
   // if (!password) {
   //   form.passwordRequiredError().style.display = "block";
   // } else {
