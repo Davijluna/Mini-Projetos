@@ -27,6 +27,7 @@ function login() {
   // console.log('depois')
   // 
   // ! corrigir bug de recuperação de senha
+   // ! corrigir bug de recuperação de senha
 }
 
 function getErrorMessage(error) {
