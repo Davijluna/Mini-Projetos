@@ -52,16 +52,44 @@
 // // Exemplo de uso:
 // staircase(6);
 
-const baseCount = 6;
-const array = [];
+// const baseCount = 6;
+// const array = [];
 
-for (let i = baseCount; i >= 1; i--) {
-    const row = [];
-    for (let j = 1; j <= baseCount; j++) {
-        j < i ? row.push(" ") : row.push("*");
+// for (let i = baseCount; i >= 1; i--) {
+//     const row = [];
+//     for (let j = 1; j <= baseCount; j++) {
+//         j < i ? row.push(" ") : row.push("*");
+//     }
+//     array.push(row.join(""));
+// }
+
+// console.log(array)
+// array.forEach(row => console.log(row));
+
+function staircase(n) {
+    let space = '2';
+    let recebtor = [];
+    
+    for (let i = 1; i <= n; i +=1) {
+        recebtor+= space
+        for (let x = recebtor.length; x >= 1; x -= 1) {
+            recebtor += "#".repeat(n - 1)
+        }
+
+        console.log(recebtor, recebtor.length)
+
     }
-    array.push(row.join(""));
+    // for (let y = n; y >= 1; y -= 1) {
+    //     let test = recebtor = ' '.repeat(y)
+    //     let test2 = recebtor
+    //     console.log(test)
+    // }
+
+    // for (let y = n ; y > 1; y -= 1) {
+    //     recebtor += recebtor.slice(recebtor[y], -1)+'#'
+    //     console.log(recebtor, y)
+    // }
+
 }
 
-console.log(array)
-array.forEach(row => console.log(row));
+staircase(6)
