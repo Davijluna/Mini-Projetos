@@ -41,17 +41,45 @@ function register() {
   window.location.href = "page/register/register.html";
 }
 
+// function recoverPassword() {
+//     showLoading();
+//       firebase.auth().sendPasswordResetEmail(form.email().value).then(() => {
+//       hideLoading();
+//       console.log(firebase.auth().sendPasswordResetEmail(form.email().value));
+//       alert("Email enviado com sucesso");
+//   }).catch((error) => {
+//     hideLoading();
+//    alert(getErrorMessage(error));
+//   });
+// }
+
 function recoverPassword() {
-    showLoading();
-      firebase.auth().sendPasswordResetEmail(form.email().value).then(() => {
+  const emailAddress = form.email().value;
+
+  showLoading();
+
+  firebase.auth().ferchSignInMethodsForEmail(emailAddress)
+    .then((signInMethods) => {
+      if (signInMethods && signInMethods.length > 0) {
+        firebase.auth().sendPasswordResetEmail(emailAddress)
+          .then(() => {
+            hideLoading();
+            alert("Email enviado com sucesso");
+          }).catch((error) => {
+            hideLoading();
+            alert(getErrorMessage(error));
+          });
+      } else {
+        hideLoading();
+        alert("Este email não está cadastrado");
+      }
+    }).catch((error) => {
       hideLoading();
-      console.log(firebase.auth().sendPasswordResetEmail(form.email().value));
-      alert("Email enviado com sucesso");
-  }).catch((error) => {
-    hideLoading();
-   alert(getErrorMessage(error));
-  });
+      alert(getErrorMessage(error));
+    });
 }
+
+
 
 
 function toggleEmailErrors() {
