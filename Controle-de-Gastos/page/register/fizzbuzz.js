@@ -66,19 +66,19 @@
 // console.log(array)
 // array.forEach(row => console.log(row));
 
-function staircase(n) {
-    let space = '2';
-    let recebtor = [];
+// function staircase(n) {
+//     let space = '2';
+//     let recebtor = [];
     
-    for (let i = 1; i <= n; i +=1) {
-        recebtor+= space
-        for (let x = recebtor.length; x >= 1; x -= 1) {
-            recebtor += "#".repeat(n - 1)
-        }
+//     for (let i = 1; i <= n; i +=1) {
+//         recebtor+= space
+//         for (let x = recebtor.length; x >= 1; x -= 1) {
+//             recebtor += "#".repeat(n - 1)
+//         }
 
-        console.log(recebtor, recebtor.length)
+//         console.log(recebtor, recebtor.length)
 
-    }
+//     }
     // for (let y = n; y >= 1; y -= 1) {
     //     let test = recebtor = ' '.repeat(y)
     //     let test2 = recebtor
@@ -90,6 +90,35 @@ function staircase(n) {
     //     console.log(recebtor, y)
     // }
 
+// }
+
+// staircase(6)
+
+// let total = [0, 1, 3, 4, 6].reduce(function (acc, value) {
+//     return acc + value;
+// })
+
+// console.log(total)
+
+
+function miniMaxSum(arr) {
+    let max = 0;
+    let min = 0;
+    let vetor = arr.reduce(function (acc, value) {
+
+        return acc + value;
+    }, 0);
+   for(let i = 1; i < arr.length; i += 1) {
+    let result = vetor - arr[i]
+    if (result > max) {
+        max = result
+    } else if(result < max && result > 0 ) {
+        min = result
+    }
+    console.log( max, min)
+   }
 }
 
-staircase(6)
+const array = [426980153, 354802167, 142980735, 968217435, 734892650]
+// 1659655705 2484892405
+miniMaxSum(array);

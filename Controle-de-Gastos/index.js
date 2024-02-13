@@ -41,46 +41,48 @@ function register() {
   window.location.href = "page/register/register.html";
 }
 
-// function recoverPassword() {
-//     showLoading();
-//       firebase.auth().sendPasswordResetEmail(form.email().value).then(() => {
-//       hideLoading();
-//       console.log(firebase.auth().sendPasswordResetEmail(form.email().value));
-//       alert("Email enviado com sucesso");
-//   }).catch((error) => {
-//     hideLoading();
-//    alert(getErrorMessage(error));
-//   });
-// }
-
 function recoverPassword() {
-  const emailAddress = form.email().value;
-
-  showLoading();
-
-  firebase.auth().ferchSignInMethodsForEmail(emailAddress)
-    .then((signInMethods) => {
-      if (signInMethods && signInMethods.length > 0) {
-        firebase.auth().sendPasswordResetEmail(emailAddress)
-          .then(() => {
-            hideLoading();
-            alert("Email enviado com sucesso");
-          }).catch((error) => {
-            hideLoading();
-            alert(getErrorMessage(error));
-          });
-      } else {
-        hideLoading();
-        alert("Este email não está cadastrado");
-      }
-    }).catch((error) => {
+   const emailUsuario = form.email().value
+    showLoading();
+      firebase.auth().sendPasswordResetEmail(emailUsuario).then(() => {
       hideLoading();
-      alert(getErrorMessage(error));
-    });
+      alert("Email enviado com sucesso");
+      console.log(emailUsuario);
+  }).catch((error) => {
+    hideLoading();
+   alert("erro de email", error.message);
+  });
 }
 
+function emailBoolean () {
 
+}
 
+// function recoverPassword() {
+//   const emailAddress = form.email().value;
+
+//   showLoading();
+
+//   firebase.auth().ferchSignInMethodsForEmail(emailAddress)
+//     .then((signInMethods) => {
+//       if (signInMethods && signInMethods.length > 0) {
+//         firebase.auth().sendPasswordResetEmail(emailAddress)
+//           .then(() => {
+//             hideLoading();
+//             alert("Email enviado com sucesso");
+//           }).catch((error) => {
+//             hideLoading();
+//             alert(getErrorMessage(error));
+//           });
+//       } else {
+//         hideLoading();
+//         alert("Este email não está cadastrado");
+//       }
+//     }).catch((error) => {
+//       hideLoading();
+//       alert(getErrorMessage(error));
+//     });
+// }
 
 function toggleEmailErrors() {
   const email = form.email().value;
