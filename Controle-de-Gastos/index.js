@@ -14,23 +14,18 @@ function onChangeEmail() {
 }
 
 function login() {
-  showLoading();
-  firebase.auth().signInWithEmailAndPassword(
-    form.email().value, form.password().value
-    ).then(() => {
+    showLoading();
+    firebase.auth().signInWithEmailAndPassword(form.email().value, form.password().value).then(response => {
       hideLoading()
-    window.location.href = "page/home/Home.html";
-  }).catch((error) => {
-      hideLoading();
-    getErrorMessage(error);
-  })
-  // console.log('antes')
-  // console.log('depois')
-  // 
+      window.location.href = "page/home/Home.html";
+    }).catch(error => {
+      hideLoading()
+      alert(getErrorMessage(error))
+    }) 
 }
 
 function getErrorMessage(error) {
-  if (error.code == "auth/user-not-found") {
+  if (error.code == "auth/invalid-credential") {
     return "Usuário não encontrado"
   } 
     return error.message;
@@ -42,62 +37,23 @@ function register() {
 }
 
 function recoverPassword() {
-   const emailUsuario = form.email().value
-    showLoading();
-      firebase.auth().sendPasswordResetEmail(emailUsuario).then(() => {
+  showLoading(); 
+  const email = document.getElementById('email').value;
+  firebase.auth().sendPasswordResetEmail(email)
+    .then(() => {
       hideLoading();
-      alert("Email enviado com sucesso");
-      console.log(emailUsuario);
-  }).catch((error) => {
-    hideLoading();
-   alert("erro de email", error.message);
-  });
+      alert("Email enviado com sucesso.")
+    }).catch((error) => {
+      hideLoading();
+      getErrorMessage(error)
+    });
 }
-
-function emailBoolean () {
-
-}
-
-// function recoverPassword() {
-//   const emailAddress = form.email().value;
-
-//   showLoading();
-
-//   firebase.auth().ferchSignInMethodsForEmail(emailAddress)
-//     .then((signInMethods) => {
-//       if (signInMethods && signInMethods.length > 0) {
-//         firebase.auth().sendPasswordResetEmail(emailAddress)
-//           .then(() => {
-//             hideLoading();
-//             alert("Email enviado com sucesso");
-//           }).catch((error) => {
-//             hideLoading();
-//             alert(getErrorMessage(error));
-//           });
-//       } else {
-//         hideLoading();
-//         alert("Este email não está cadastrado");
-//       }
-//     }).catch((error) => {
-//       hideLoading();
-//       alert(getErrorMessage(error));
-//     });
-// }
 
 function toggleEmailErrors() {
   const email = form.email().value;
   form.emailRequiredError().style.display = email ? "none" : "block";
-  //  if (!email) {
-    //   form.emailRequiredError().style.display = "block";
-    //  } else {
-      //   form.emailRequiredError().style.display = "none";
-      //  }
   form.emailInValidError().style.display = validateEmail(email) ? "none" : "block";
-//  if (validateEmail(email)) {
-  //   form.emailInValidError().style.display = "none";
-  //  } else {
-    //   form.emailInValidError().style.display = "block"
-    //  }
+
   }
         
 function isEmailValid() {
