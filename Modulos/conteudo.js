@@ -1,26 +1,24 @@
-const linguagens = ["Java", "JavaScript", "Python", "C", "C#", "C++"];
-const person = {
-  firstName: "Davi",
-  lastName: "Jesus de Luna",
-  age:36,
-  nationality: "Brazilian"
+class Cursos{
+  static cursos = ["Java", "JavaScript", "Python", "C", "C#", "C++"];
+  constructor() {}
+
+  static getTodosCursos = () => {
+    return this.cursos
+  }
+
+  static getCurso = (i_curso) => {
+    return this.cursos[i_curso]
+  }
+
+  static addCurso = (todosCurso) => {
+    this.cursos.push(todosCurso)
+  }
+
+  static apagaCurso = () => {
+    this.cursos=[]
+  }
 }
 
 
-
-const personConvert = Object.keys(person)
-
-// Object.keys(person).forEach(function(element) {
-//   console.log(`${element}: ${person[element]}`)
-// })
-
-
-Object.keys(person).forEach((element) => console.log(`${element}: ${person[element]}`))
-
-
-
-
-console.log(personConvert, 'Person !!!')
-
-export {linguagens, person};
+export default Cursos;
 
