@@ -3,6 +3,9 @@
 
 const fs = require('fs')
 
+
+fs.appendFileSync('readFile.txt', 'data to append');
+
 // ** Escreve dados em arquivos de forma sincrona.
 
 // const texto = "Escrevendo usando a função writeFileSync!!!!!"
