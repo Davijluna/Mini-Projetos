@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- TODO: Retirando erro de favicon com link vazio. -->
+  <link rel="icon" href="#"> 
+  <link rel="stylesheet" href="style.css">
+  <title>IMC</title>
+</head>
+<body>
+  <div>
+    <p>IMC</p>
+    <div>
+      <label for="alura">AUTURA
+        <input type="text" id="altura" name="altura">
+      </label>
+
+      <label for="peso">PESO
+        <input type="text" id="peso" name="peso">
+      </label>
+    </div>
+    <p class="returnoIMC"></p>
+  </div>
+  <br>
+  <button onclick="calculo()">Fazer calculo</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
