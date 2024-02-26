@@ -19,8 +19,9 @@ const calculo = () => {
    alert("Digite um número para o calculo!!!!")
   }
     const IMC =  valeuPeso / (valeAltura **2)
-    console.log(filtraIMC(IMC.toFixed(2)))
-    valorIMC.innerText = filtraIMC(IMC.toFixed(2))
+    console.log(filtraIMC(IMC.toFixed(1)))
+    const teste = IMC.toFixed(1)
+    valorIMC.innerText = filtraIMC(teste)
 
 }
 
