@@ -11,6 +11,10 @@ const calculo = () => {
   const valeuPeso = peso;
   const valeAltura = altura;
 
+  if(inputPeso.value === '' || inputPeso.value === '') {
+    alert('Altura ou peso está vazio.')
+    return valorIMC.innerText = 'Campos estão vazios'
+  }
   if(/\d{1}\.?\d{2}/.test(valeAltura)) {
     alert("Altura deve ter ponto decimal")
     return valorIMC.innerText = 'Altura não têm ponto'
