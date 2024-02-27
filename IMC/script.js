@@ -10,7 +10,7 @@ const calculo = () => {
 
   const valeuPeso = peso;
   const valeAltura = altura;
-
+// ! iniciando teste para aplicação IMC
   if(inputPeso.value === '' || inputPeso.value === '') {
     alert('Altura ou peso está vazio.')
     return valorIMC.innerText = 'Campos estão vazios'
