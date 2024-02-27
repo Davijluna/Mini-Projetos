@@ -4,11 +4,17 @@
 
 body {
   background: rgb(70, 116, 96);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container {
   display: flex;
+  justify-content: center;
   flex-direction: column;
+  align-items: center;
 }
 
 .item {
@@ -19,9 +25,19 @@ body {
   background-color: rgb(138, 165, 146);
   width: 650px;
   height: 180px;
+  border-radius: 10px;
 }
 
 p {
-background-color: blueviolet;
+background-color: rgb(138, 165, 146);
 color: antiquewhite;
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+}
+
+button:hover {
+  background-color: rgb(245, 249, 246);
 }
