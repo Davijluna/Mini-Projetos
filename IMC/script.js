@@ -4,29 +4,28 @@ const inputPeso = document.querySelector('#peso');
 const valorIMC = document.querySelector('.returnoIMC')
 
 const calculo = () => {
-  /\d{1}\.?\d{2}/
   const peso = parseFloat(inputPeso.value);
   const altura = parseFloat(inputAltura.value);
 
-  const valeuPeso = peso;
-  const valeAltura = altura;
-
-  if(inputPeso.value === '' || inputPeso.value === '') {
+  if(inputPeso.value === '' || inputAltura.value === '') {
     alert('Altura ou peso está vazio.')
     return valorIMC.innerText = 'Campos estão vazios'
   }
-  if(/\d{1}\.?\d{2}/.test(valeAltura)) {
+
+  if(isNaN(peso) || isNaN(altura)) {
+   alert("Digite um número para o calculo!!!!")
+   return;
+  }
+
+  if(!/^-?\d+\.\d+$/.test(inputAltura.value)) {
     alert("Altura deve ter ponto decimal")
     return valorIMC.innerText = 'Altura não têm ponto'
   }
-  if(isNaN(valeAltura) || isNaN(valeuPeso)) {
-   alert("Digite um número para o calculo!!!!")
-  }
-    const IMC =  valeuPeso / (valeAltura **2)
-    console.log(filtraIMC(IMC.toFixed(1)))
+    const IMC =  peso / (altura ** 2)
+    console.log(IMC)
     const teste = IMC.toFixed(1)
-    valorIMC.innerText = filtraIMC(teste)
-
+    const resultadoIMC = filtraIMC(teste)
+    valorIMC.innerText = resultadoIMC;
 }
 
 const filtraIMC = (imc) => {
