@@ -33,6 +33,21 @@ background-color: rgb(138, 165, 146);
 color: antiquewhite;
 }
 
+.colorClear {
+  background-color: rgb(138, 165, 146);
+  color: antiquewhite;
+}
+
+.colorRed {
+  background-color: rgb(138, 165, 146);
+  color: rgb(247, 26, 6);
+}
+
+.colorOrange {
+  background-color: rgb(138, 165, 146);
+  color: rgb(233, 214, 10);
+}
+
 button {
   border-radius: 4px;
   border: none;
