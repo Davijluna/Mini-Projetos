@@ -15,7 +15,7 @@ const calculo = () => {
 
   if(isNaN(peso) || isNaN(altura)) {
    alert("Digite um número para o calculo!!!!")
-   return;
+   return valorIMC.innerText = 'Você não digitou um número';
   }
 
   if(!/^-?\d+\.\d+$/.test(inputAltura.value)) {
@@ -23,11 +23,14 @@ const calculo = () => {
     alert("Altura deve ter ponto decimal")
     return valorIMC.innerText = 'Altura não têm ponto'
   }
-    const IMC =  peso / (altura ** 2)
-    console.log(IMC)
-    const teste = IMC.toFixed(1)
-    const resultadoIMC = filtraIMC(teste)
-    valorIMC.innerText = resultadoIMC;
+    const result = calculoIMC(peso, altura)
+    return valorIMC.innerText = result;
+}
+
+const calculoIMC = (peso, altura) => {
+  const IMC =  peso / (altura ** 2)
+  const teste = IMC.toFixed(1)
+  return filtraIMC(teste)
 }
 
 const filtraIMC = (imc) => {
