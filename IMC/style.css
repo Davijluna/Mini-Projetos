@@ -3,11 +3,20 @@
 }
 
 body {
-  background: rgb(70, 116, 96);
   display: flex;
+  flex-direction: row; 
   justify-content: center;
-  flex-direction: column;
   align-items: center;
+  background: rgb(70, 116, 96);
+} 
+
+.container-main {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  /* background: red; */
+  height: 100vh;
+  /* width: 100vh; */
 }
 
 .container {
@@ -17,9 +26,6 @@ body {
   align-items: center;
 }
 
-/* .item {
-
-} */
 
 .divIMC {
   background-color: rgb(138, 165, 146);
@@ -45,7 +51,7 @@ color: antiquewhite;
 
 .colorOrange {
   background-color: rgb(138, 165, 146);
-  color: rgb(233, 214, 10);
+  color: rgb(6, 3, 0);
 }
 
 button {
