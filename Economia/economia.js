@@ -38,5 +38,45 @@ const remove = (paragrafo) => {
   }
 };
 
+// TODO: outra solucão.
+
+// const getValores = document.querySelector('.valores');
+// const getParagrafos = document.querySelector('#paragrafos');
+// const paragrafosArray = [];
+
+// const actionValor = () => {
+//   const creatTag = document.createElement('p');
+//   creatTag.innerText = getValores.value;
+//   getValores.value = '';
+
+//   // Criando botão
+//   const buttonRemove = document.createElement('button');
+//   buttonRemove.innerText = 'Excluir';
+
+//   // Adicionando parágrafo e botão ao contêiner
+//   getParagrafos.appendChild(creatTag);
+//   getParagrafos.appendChild(buttonRemove);
+
+//   // Adicionando evento de remoção ao botão
+//   buttonRemove.onclick = () => {
+//     remove(creatTag);
+//   };
+
+//   // Adicionando referência ao parágrafo no array
+//   paragrafosArray.push({ paragraph: creatTag, button: buttonRemove });
+
+//   return getParagrafos;
+// };
+
+// const remove = (paragrafo) => {
+//   // Removendo parágrafo e botão do contêiner
+//   getParagrafos.removeChild(paragrafo);
+//   const index = paragrafosArray.findIndex(item => item.paragraph === paragrafo);
+//   if (index > -1) {
+//     paragrafosArray.splice(index, 1);
+//   }
+// };
+
+
 
 
