@@ -1,22 +1,42 @@
 const getValores = document.querySelector('.valores');
-let getParagrafos = document.querySelector('#paragrafos')
+const getParagrafos = document.querySelector('#paragrafos');
+const paragrafosArray = [];
 
 const actionValor = () => {
   const creatTag = document.createElement('p');
-  creatTag.innerText += getValores.value
-  getValores.value = ''
-  
-  // criando button
-  
-  const buttonRemove = document.createElement('button')
+  creatTag.innerText = getValores.value;
+  getValores.value = '';
+
+  // Criando botão
+  const buttonRemove = document.createElement('button');
   buttonRemove.innerText = 'Excluir';
-  getParagrafos.appendChild(creatTag)
-  getParagrafos.appendChild(buttonRemove).onclick(remove())
-  return getParagrafos
-}
+
+  // Adicionando parágrafo e botão ao contêiner
+  getParagrafos.appendChild(creatTag);
+  getParagrafos.appendChild(buttonRemove);
+
+  // Adicionando evento de remoção ao botão
+  buttonRemove.onclick = () => {
+    remove(buttonRemove);
+    remove(creatTag);
+  }
 
 
-const remove = () => {
-  console.log('Hello World !!')
-}
+  // Adicionando referência ao parágrafo no array
+  paragrafosArray.push(creatTag);
+
+  return getParagrafos;
+};
+
+const remove = (paragrafo) => {
+  getParagrafos.removeChild(paragrafo);
+
+  // Removendo a referência do parágrafo do array
+  const index = paragrafosArray.indexOf(paragrafo);
+  if (index > -1) {
+    paragrafosArray.splice(index, 1);
+  }
+};
+
+
 
