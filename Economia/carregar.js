@@ -1,34 +1,14 @@
-const fs = require('fs');
 const reader = require('xlsx')
-const filePath = './fornecedores.xlsx'
 const file = reader.readFile('./fornecedores.xlsx');
+const sheet = file.Sheets['Planilha1'];
+const json = reader.utils.sheet_to_json(sheet)
 
-let data = []
+const jsonInObject = JSON.stringify(json)
+const jsonParse = JSON.parse(jsonInObject)
 
-const sheets = file.SheetNames
-
-console.log(sheets)
-
-for(let index = 0; index < sheets.length; index += 1) {
-  const temp = reader.utils.sheet_to_json(
-    file.Sheets[file.SheetNames[index]])
-    temp.forEach((res) => {
-      data.push(res)
-    })
+for(let i = 0; i < jsonParse.length; i += 1) {
+  console.log(jsonParse[i])
 }
-
-console.log(data)
-
-// 'Planilha1'
-
-// fs.readFile(filePath, 'utf8', (err, data) => {
-//   if(err) {
-//     console.log('Ouve um erro ao carregar o arquivo', err)
-//   }
-//     console.log('Conteúdo do arquivo:', data)
-// })
-
-
 
 
 
