@@ -7,7 +7,7 @@ const jsonInObject = JSON.stringify(json)
 const jsonParse = JSON.parse(jsonInObject)
 
 for(let i = 0; i < jsonParse.length; i += 1) {
-  console.log(jsonParse[i])
+  console.log(`Nome: ${jsonParse[i].Nome}, Endereço: ${jsonParse[i].Endereço} Cidade: ${jsonParse[i].Cidade} Telefone: ${jsonParse[i].Telefone}`);
 }
 
 
