@@ -1,10 +1,12 @@
-const nomes = ['Maria', 'Arthur', 'Algusto', 'Mara'];
+const nomes = ['Arthur', 'Algusto', 'Mara'];
 
 const cliente = 'Mara';
 
-for(let i = 0; i < nomes.length; i += 1) {
-  if(nomes[i] === cliente) {
-    console.log('Nome encontrado.')
-  }
-  console.log('Não encontramos nome')
+const encontraNome = (nome) => {
+  const encontraNome = nome.includes(cliente)
+  if(encontraNome)return 'Nome existe';
+    return 'Não existe Nome'
+  
 }
+
+console.log(encontraNome(nomes))
