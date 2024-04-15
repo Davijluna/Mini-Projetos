@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>formuário</title>
+  <style>
+    h1 , .formulario{
+      font-family: sans-serif;
+      display: flex;
+      /* align-items: center; */
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formulário</h1>
+<div class="formulario">
+  <form action="post">
+    <label for="nome">Nome:
+      <input type="text" name="nome" id="nome" placeholder="Seu:. nome completo">
+    </label>
+<br>
+<br>
+    <label for="idade">Idade:
+      <input type="number" name="idade" max="100" min="18" value="0">
+    </label>
+
+    <label for="email">Email:
+      <input type="email" name="email" id="email" placeholder="ex:. seu@email.com">
+    </label>
+  <p>
+
+    Gênero:
+
+    <label for="feminino">Feminino</label>
+    <input type="radio" id="feminino" name="genero" value="feminino">
+
+    <label for="masculino">Masculino</label>
+    <input type="radio" id="masculino" name="genero" value="masculino">
+    
+    <label for="outro">Outro</label>
+    <input type="radio" id="outro" name="genero" value="outro">
+  </p>
+    <p>
+      <button type="reset">Reset</button>
+      <button type="submit">Enviar</button>
+    </p>
+  </form>
+</div>
+</body>
+</html>
