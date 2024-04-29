@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+}
+
+p {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+a {
+  color: blue;
+  font-family:'Courier New', Courier, monospace
+}
