@@ -3,7 +3,7 @@ import React from 'react'
 const buttonFooter = () => {
   return (
     <div className='buttonFooter'>
-      <p>Comprar</p>
+      <a href="#"><p>Comprar</p></a>
     </div>
   )
 }

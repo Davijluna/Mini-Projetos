@@ -6,10 +6,13 @@ const Header = () => {
   return (
     <header className='headerTop'>
       <div className='logToStok'>
-      <p><h1>MKS</h1> <h2>Sistemas</h2></p>
+      <p className='title'><h1>MKS</h1> <h2>Sistemas</h2></p>
 
-      <button type='button'><img src={Carrinho} alt='Carrinho de compras'/> 1</button>
+    <div>
+      <button className='botao' type='button'><img src={Carrinho} alt='Carrinho de compras'/> 1</button>
       </div>
+    </div>
+
     </header>
   )
 }

@@ -43,8 +43,6 @@ const App: React.FC = () => {
         <div className="App">
             <ul>
               {products.map(product => (
-                
-              
                 <div className='celulaProduto' key={product.id}>
                   <img src={product.photo} alt={product.name} style={{ width: '100px', height: '100px' }} />
                   <div className='productUni'>
@@ -57,9 +55,7 @@ const App: React.FC = () => {
               ))}
             </ul>
         </div>
-
       </main>
-
       <footer>
       <Footer/>
       </footer>
