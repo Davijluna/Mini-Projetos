@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
+import Header from './Header';
+import Footer from './Footer';
+import ButtonFooter from './ButtonFooter';
 
 interface Product {
   id: number;
@@ -31,23 +34,36 @@ const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Listagem de Produtos</h1>
-        <ul>
-          {products.map(product => (
-            <li key={product.id}>
-              <img src={product.photo} alt={product.name} style={{ width: '100px', height: '100px' }} />
-              <div>
-                <h2>{product.name}</h2>
-                <p>Preço: {product.price}</p>
-                <p>Descrição: {product.description}</p>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </header>
-    </div>
+   <>
+<header>
+      <Header/>
+</header>
+        <br />
+      <main>
+        <div className="App">
+            <ul>
+              {products.map(product => (
+                
+              
+                <div className='celulaProduto' key={product.id}>
+                  <img src={product.photo} alt={product.name} style={{ width: '100px', height: '100px' }} />
+                  <div className='productUni'>
+                    <h2>{product.name}</h2>
+                    <p><strong>R${product.price}</strong></p>
+                    <p>{product.description}</p>
+                  </div>
+                  <ButtonFooter/>
+                </div>
+              ))}
+            </ul>
+        </div>
+
+      </main>
+
+      <footer>
+      <Footer/>
+      </footer>
+      </>
   );
 }
 

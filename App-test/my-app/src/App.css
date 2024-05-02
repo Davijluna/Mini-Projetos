@@ -2,11 +2,81 @@
   margin: 0;
 }
 
+body {
+  background: #f1fdfe;
+}
+
+h2 {
+  font-size: 17px;
+  font-family: 'Arial Narrow';
+}
+
 p {
   font-family: 'Courier New', Courier, monospace;
+  color: black;
+  font-size: 12px;
 }
 
 a {
   color: blue;
   font-family:'Courier New', Courier, monospace
 }
+
+ul {
+  display: flex;
+}
+
+.App {
+  display: flex;
+  justify-content: space-between;
+  width: 225px;
+}
+
+.App ul {
+  padding: 0;
+}
+
+.celulaProduto {
+  background: #FFFFFF;
+  border: solid 1px;
+  border-radius: 3px;
+  width: 129px;
+  margin: 5px;
+  padding: 1px 1px;
+  position: relative;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  background: #c8caca;
+  height: 30px;
+}
+
+.stringFooter {
+  padding-top: 9px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* button das divs */
+
+.buttonFooter {
+  background: blue;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.buttonFooter p {
+  align-items: center;
+  color: #EEEEEE;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
