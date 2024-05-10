@@ -1,0 +1,1 @@
+nesta aula fizemos a instalação do SCRATCH e conhecemos como ele funciona.
