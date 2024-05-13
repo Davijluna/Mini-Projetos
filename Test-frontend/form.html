@@ -1,11 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>formulário</title>
 </head>
 <body>
-  
+  <div>
+    <form action="get">
+      <!-- nome, mensalidade, tempo de contribuição  -->
+      <label for="nome">Nome
+        <input type="text" placeholder="Digite seu nome" name="nome">
+      </label>
+
+      <label for="mensalidade">Mensalidade
+        <input type="number" placeholder="Digite seu nome" name="mensalidade">
+      </label>
+
+      <label for="temp">Tempo de contribuição
+       <select name="temp" id="">
+        <option value="1ano">1 ano</option>
+        <option value="2anos">2 anos</option>
+        <option value="3anos">3 anos</option>
+        <option value="4anos">4 anos</option>
+        <option value="5anos">5 anos</option>
+        <option value="6anos">6 anos</option>
+       </select>
+      </label>
+      <button type="submit">Simular</button>
+    </form>
+  </div>
 </body>
 </html>
