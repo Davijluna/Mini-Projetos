@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: rgb(20, 54, 87);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulario {
+  margin: 120px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  background-color: rgb(99, 122, 153);
+  width: 280px;
+  height: 280px;
+}
+
+.formulario label {
+  margin: 8px;
+}
+
+.length {
+  margin: auto;
+  max-width: 100px;
+}
+
+
+

@@ -3,20 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>formulário</title>
 </head>
 <body>
-  <div>
+  <div class="formulario">
     <form action="get">
       <!-- nome, mensalidade, tempo de contribuição  -->
       <label for="nome">Nome
-        <input type="text" placeholder="Digite seu nome" name="nome">
+        <input type="text" placeholder="Digite seu nome" class="length" name="nome">
       </label>
-
-      <label for="mensalidade">Mensalidade
-        <input type="number" placeholder="Digite seu nome" name="mensalidade">
+      <br>
+      <br>
+      <label for="mensalidade" >Mensalidade<input type="number" placeholder="Digite seu nome" class="length" name="mensalidade">
       </label>
-
+      <br>
+      <br>
       <label for="temp">Tempo de contribuição
        <select name="temp" id="">
         <option value="1ano">1 ano</option>
@@ -27,6 +29,7 @@
         <option value="6anos">6 anos</option>
        </select>
       </label>
+      <br>
       <button type="submit">Simular</button>
     </form>
   </div>
