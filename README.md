@@ -3,6 +3,6 @@
 
 <p>
 <h3 align=center>
-Essas lintas de projetos estão sendo adicionadas para testes auxilios de estudos
+Essas lintas de projetos estão sendo adicionadas para testes e auxilios de estudos
 </h3>
 </p>
