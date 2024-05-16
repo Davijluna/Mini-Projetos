@@ -8,19 +8,19 @@
 </head>
 <body>
   <div class="formulario">
-    <form action="get">
+    <form id="cadastro" action="post">
       <!-- nome, mensalidade, tempo de contribuição  -->
       <label for="nome">Nome
-        <input type="text" placeholder="Digite seu nome" class="length" name="nome">
+        <input id="nome" type="text" placeholder="Digite seu nome" class="length" name="nome">
       </label>
       <br>
       <br>
-      <label for="mensalidade" >Mensalidade<input type="number" placeholder="Digite seu nome" class="length" name="mensalidade">
+      <label  for="mensalidade" >Mensalidade<input id="mens" type="number" placeholder="Digite seu nome" class="length" name="mensalidade">
       </label>
       <br>
       <br>
-      <label for="temp">Tempo de contribuição
-       <select name="temp" id="">
+      <label  for="temp">Tempo de contribuição
+       <select name="temp" id="temp">
         <option value="1ano">1 ano</option>
         <option value="2anos">2 anos</option>
         <option value="3anos">3 anos</option>
@@ -30,8 +30,10 @@
        </select>
       </label>
       <br>
-      <button type="submit">Simular</button>
+      <button onclick="cadastroForm()" type="menu" >Simular</button>
     </form>
   </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
