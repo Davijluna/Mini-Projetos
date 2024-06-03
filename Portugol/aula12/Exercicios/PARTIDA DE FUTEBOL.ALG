@@ -1,14 +1,16 @@
 Algoritmo "Partida de Futebol"
+// Disciplina   : [Linguagem e Lógica de Programação] 
+// Professor   : Antonio Carlos Nicolodi 
 
 Var
    t1, t2, diferenca: inteiro
    frase: caractere
 
- procedimento Topo(golsTotal:inteiro, valor:caractere)
+ procedimento Topo(golsTotal:inteiro)
              Inicio
                 escreval("--------------------------------")
                 escreval("Diferença de : ", golsTotal)
-                escreval(valor)
+                escreval(frase)
                 escreval("--------------------------------")
  FimProcedimento
 Inicio
@@ -36,7 +38,7 @@ Inicio
    frase <- "normal"
    se (diferenca = 0) entao
       frase <- "Empate"
-      Topo(diferenca, frase)
+      Topo(diferenca)
       //escreval("--------------------------------")
       //escreval("Diferença de : ", diferenca)
       //escreval("Empate")
@@ -44,7 +46,7 @@ Inicio
    senao
       se (diferenca <= 3) e (diferenca >=1) entao
          frase <- "Partida Normal"
-         Topo(diferenca, frase)
+         Topo(diferenca)
          //escreval("--------------------------------")
          //escreval("Diferença de : ", diferenca)
          //escreval("Partida Normal")
@@ -52,7 +54,7 @@ Inicio
       senao
          se (diferenca >= 4) entao
             frase <- "Goleada"
-            Topo(diferenca, frase)
+            Topo(diferenca)
             //escreval("--------------------------------")
             //escreval("Diferença de : ", diferenca)
             //escreval("Goleada")
