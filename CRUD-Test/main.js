@@ -1,5 +1,3 @@
-'use strict'
-
 const openModal = () => document.getElementById('modal')
     .classList.add('active')
 
@@ -7,28 +5,26 @@ const closeModal = () => document.getElementById('modal')
     .classList.remove('active')
 
 const tempClient = {
-  nome: "Paulo",
-  email: "paulo@gmail.com",
-  celular: "1112345678",
+  nome: "Maria",
+  email: "maria@gmail.com",
+  celular: "9879087986",
   cidade: "São Paulo"
 }
 
   // CRUD - create read update delete
 
-  // localStorage.setItem("db_client", JSON.stringify([]))
+  const getLocaStorage = () => JSON.parse(localStorage.getItem('db_client'))??[];
+  const setLocalStorage = (dbClient) =>  localStorage.setItem('db_client', JSON.stringify(dbClient));
 
+
+// CRUD - CREATE
   const createClient = (client) => {
-    const db_client =  JSON.parse(localStorage.getItem("db_client"))
-
-    if (!db_client) {
-      db_client = [];
-    }
-    
-    console.log(db_client)
-    db_client.push(client)
-    localStorage.setItem("db_client",JSON.stringify(db_client))
+    const dbClient = getLocaStorage()
+    dbClient.push(client)
+    setLocalStorage(dbClient)
+   
   }
-//  createClient(tempClient)
+
 // Eventos
 document.getElementById('cadastrarCliente')
     .addEventListener('click', openModal)
