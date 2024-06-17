@@ -5,16 +5,22 @@ const closeModal = () => document.getElementById('modal')
     .classList.remove('active')
 
 const tempClient = {
-  nome: "José",
-  email: "jose@gmail.com",
-  celular: "9879087986",
-  cidade: "São Paulo"
+  nome: "Cleyde",
+  email: "cleyde@gmail.com",
+  celular: "98798663",
+  cidade: "Macapá"
 }
 
   // CRUD - create read update delete
 
-  const getLocaStorage = () => JSON.parse(localStorage.getItem('db_client'))??[];
-  const setLocalStorage = (dbClient) =>  localStorage.setItem('db_client', JSON.stringify(dbClient));
+const getLocaStorage = () => JSON.parse(localStorage.getItem('db_client'))??[];
+const setLocalStorage = (dbClient) =>  localStorage.setItem('db_client', JSON.stringify(dbClient));
+
+const updateClient = (index, client) => {
+  const dbClient = readClient()
+  dbClient[index] = client
+  setLocalStorage(dbClient)
+}
 
 const readClient = () => getLocaStorage()
 
