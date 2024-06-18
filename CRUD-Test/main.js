@@ -41,7 +41,7 @@ const readClient = () => getLocaStorage()
 // Interação com o Usuario.
 
 const isValidFields = () => {
-  
+  return document.getElementById('form').reportValidity()
 }
 
 const saveClient = () => {
