@@ -46,6 +46,13 @@ const isValidFields = () => {
 
 const saveClient = () => {
   if(isValidFields()) {
+    const client = {
+      nome: document.getElementById('nome').value,
+      email: document.getElementById('email').value,
+      telefone: document.getElementById('telefone').value,
+      cidade: document.getElementById('cidade').value,
+    }
+    createClient(client);
     console.log("cadastrando cliente")
   }
 }
