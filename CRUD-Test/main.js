@@ -1,8 +1,12 @@
 const openModal = () => document.getElementById('modal')
     .classList.add('active')
 
-const closeModal = () => document.getElementById('modal')
+const closeModal = () => {
+  clearFileds();
+  document.getElementById('modal')
     .classList.remove('active')
+    
+}
 
 const tempClient = {
   nome: "Cleyde",
@@ -44,6 +48,12 @@ const isValidFields = () => {
   return document.getElementById('form').reportValidity()
 }
 
+
+const clearFileds = () => {
+  const fields = document.querySelectorAll('.modal-field')
+  fields.forEach(field => field.value = "");
+}
+
 const saveClient = () => {
   if(isValidFields()) {
     const client = {
@@ -53,7 +63,7 @@ const saveClient = () => {
       cidade: document.getElementById('cidade').value,
     }
     createClient(client);
-    console.log("cadastrando cliente")
+    closeModal();
   }
 }
 
