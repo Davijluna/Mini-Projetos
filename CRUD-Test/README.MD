@@ -28,6 +28,6 @@ Tendo a posiblidade de ler os dados que estão armazenados o banco de dados no n
 
 > * NOTA
 >
-> * Este contudo foi feito como modelo de teste e foi reitado do canal
+> * Este contudo foi feito como modelo de teste e foi retirado do canal
 link - [YOUTUBE] (https://www.youtube.com/@FernandoLeonid)
-    <p align="center"> Copyright &copy; Prof. Fernando Leonid </p>
+    
