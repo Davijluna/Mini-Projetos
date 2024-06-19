@@ -8,13 +8,6 @@ const closeModal = () => {
     
 }
 
-const tempClient = {
-  nome: "Cleyde",
-  email: "cleyde@gmail.com",
-  celular: "98798663",
-  cidade: "Macapá"
-}
-
   // CRUD - create read update delete
 
 const getLocaStorage = () => JSON.parse(localStorage.getItem('db_client'))??[];
@@ -63,9 +56,39 @@ const saveClient = () => {
       cidade: document.getElementById('cidade').value,
     }
     createClient(client);
+    updateTable();
     closeModal();
   }
 }
+
+const createRow = (client) => {
+    const newRow = document.createElement('tr')
+    newRow.innerHTML = `
+        <td>${client.nome}</td>
+        <td>${client.email}</td>
+        <td>${client.telefone}</td>
+        <td>${client.cidade}</td>
+        <td>
+            <button type="button" class="button green">editar</button>
+            <button type="button" class="button red">excluir</button>
+        </td>
+    `
+
+    document.querySelector('#tbClient>tbody').appendChild(newRow)
+}
+
+const clearTable = () => {
+  const rows = document.querySelectorAll('#tbClient>tbody tr')
+  rows.forEach(row => row.parentNode.removeChild(row))
+}
+
+const updateTable = () => {
+  const dbClient = readClient()
+  clearTable()
+  dbClient.forEach(createRow)
+}
+
+updateTable();
 
 // Eventos
 document.getElementById('cadastrarCliente')
