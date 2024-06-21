@@ -23,7 +23,7 @@ Inicio
       escreval("---------------------")
       escreval("  ALUNO - ", j)
       escreval("---------------------")
-      escreval("Nome: ")
+      escreva("Nome: ")
       leia(alunos[j])
       escreval("RESPOSTAS DADAS")
       
@@ -41,7 +41,7 @@ Inicio
           escreval(alunos[y], "  ", notas[y]:2:1)
    fimpara
    media <- (notas[1] + notas[2] + notas[3]) / 3
-             escreval(media:2:1)
+             escreval("Media da turma ", media:2:1)
 
 
 
