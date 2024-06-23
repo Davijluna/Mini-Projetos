@@ -17,8 +17,9 @@ const calculo = () => {
    alert("Digite um número para o calculo!!!!")
    return valorIMC.innerText = 'Você não digitou um número';
   }
-
-  if(!/^-?\d+\.\d+$/.test(inputAltura.value)) {
+// ! regex de ponto decimal
+ 
+if(!/^-?\d+\.\d+$/.test(inputAltura.value)) {
     valorIMC.className = 'colorOrange';
     alert("Altura deve ter ponto decimal")
     return valorIMC.innerText = 'Altura não têm ponto'
@@ -34,6 +35,7 @@ const calculoIMC = (peso, altura) => {
 }
 
 const filtraIMC = (imc) => {
+  // debugger
   if(imc < 18.5) {
     valorIMC.className = 'colorRed';
     return 'Magreza	0';
