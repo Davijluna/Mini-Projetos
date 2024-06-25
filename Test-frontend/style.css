@@ -9,6 +9,12 @@ body {
   justify-content: center;
 }
 
+.formulario h1 {
+  margin: 12px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
 .formulario {
   margin: 120px;
   padding: 10px;

@@ -1,6 +1,5 @@
-export const nome = {
-  nome: "davi",
-  idade: 36,
-  telefone: 9398703434
-}
+const plus = +0;
+const minus = -0;
+const result = plus === minus;
 
+console.log(result)
