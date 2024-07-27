@@ -1,4 +1,4 @@
-let notes = [4,73, 67, 38, 33]
+let notes = [4,73, 67, 100, 33]
 
 function gradingStudents(grades) {
 for(let i = 0; i < grades.length; i += 1) {
@@ -16,10 +16,7 @@ for(let i = 0; i < grades.length; i += 1) {
             console.log(note1);
 
         }
-        if (note >= 73 && note < 75) {
-            let note1 = note;
-            console.log((75 - note1) + note);
-        }
+      
     }
 }
 }
