@@ -16,7 +16,7 @@ for(let i = 0; i < grades.length; i += 1) {
             console.log(note1);
 
         }
-      
+      // ainda não resolvido
     }
 }
 }
