@@ -15,4 +15,19 @@ const functionLetras = (num) => {
 
 };
 
+const functionLetras = (num) => {
+    let valueArray = []
+
+    for (let index = 0; index < num; index += 1) {
+        if (valueArray[index] == undefined) {
+            valueArray[index] = letrasArray[index]
+        } else {
+
+            valueArray[index] += letrasArray[index];
+        }
+    }
+    return valueArray
+
+};
+
 console.log(functionLetras(2));
