@@ -15,7 +15,7 @@ const functionLetras = (num) => {
 
 };
 
-const functionLetras = (num) => {
+const functionLetra = (num) => {
     let valueArray = []
 
     for (let index = 0; index < num; index += 1) {
