@@ -3,11 +3,10 @@ package controledefrotas;
 import java.io.StringReader;
 // existem quantros modificadores de acesso 1 > public , 2 > private, 3 > default 4 protected
 public class Veiculo {
-
   private String placa;
   private int fabricacao;
-
   private String combustivel;
+
 
   public String getPlaca() {
     return placa;

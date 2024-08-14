@@ -9,5 +9,9 @@ public class Principal {
     System.out.println(veiculo.getCombustivel());
 
     Carro carro = new Carro("WWY", 2001);
+    Caminhao caminhao = new Caminhao("WTR", 1999);
+
+    Veiculo v1 = new Carro("ERDF 2345", 2018);
+    Veiculo v2 = new Caminhao("THERC", 2033);
   }
 }
