@@ -13,6 +13,10 @@ public class Veiculo {
     return placa;
   }
 
+//  public Veiculo() {
+//
+//  }
+
   public String getCombustivel() {
     return combustivel;
   }
