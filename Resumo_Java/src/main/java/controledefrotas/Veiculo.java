@@ -7,11 +7,13 @@ public class Veiculo {
   private int fabricacao;
   private String combustivel;
 
+  protected ArrayList<String> abastecimento;
+
 
   public String getPlaca() {
     return placa;
   }
-
+// aula parou em 55:26 min
 //  public Veiculo() {
 //
 //  }
