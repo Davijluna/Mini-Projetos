@@ -8,10 +8,17 @@ public class Principal {
     veiculo.setCombustivel("flex");
     System.out.println(veiculo.getCombustivel());
 
+    Veiculo v1 = new Carro("ERDF 2345", 2018);
+    Veiculo v2 = new Caminhao("THERC", 2033);
+
     Carro carro = new Carro("WWY", 2001);
     Caminhao caminhao = new Caminhao("WTR", 1999);
 
-    Veiculo v1 = new Carro("ERDF 2345", 2018);
-    Veiculo v2 = new Caminhao("THERC", 2033);
+    carro.abastecer("posto 1", "Carlos", 230);
+//    caminhao.abastecer("empresa", "José", 300);
+    caminhao.abastecer("Davi", 800);
+
+    carro.listaAbastecimentos();
+    caminhao.listaAbastecimentos();
   }
 }
