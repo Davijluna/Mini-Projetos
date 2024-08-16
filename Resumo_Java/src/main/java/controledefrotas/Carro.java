@@ -7,4 +7,9 @@ public class Carro extends Veiculo{
 
         this.setCombustivel("gasolina");
     }
+
+    @Override
+    public void abastecer(String local, String motorista, double valor) {
+
+    }
 }

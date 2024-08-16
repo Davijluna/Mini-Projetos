@@ -4,7 +4,7 @@ import java.io.StringReader;
 import java.util.ArrayList;
 
 // existem quantros modificadores de acesso 1 > public , 2 > private, 3 > default 4 protected
-public class Veiculo {
+public abstract class Veiculo {
   private String placa;
   private int fabricacao;
   private String combustivel;
@@ -48,7 +48,7 @@ public class Veiculo {
     this.abastecimentos = new ArrayList<String>();
   }
 
-  public void abastecer(String local, String motorista, double valor) {
+  public abstract void abastecer(String local, String motorista, double valor) {
     this.abastecimentos
         .add(String.format("Local: %s, Motorista: %s, valor: R$ %.2f", local, motorista, valor));
   }
