@@ -3,19 +3,24 @@
     padding: 0;
 }
 
+.cab-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 .esquerda {
-    background-color: rgb(241, 6, 6);
-    height: 80px;
+    /* background-color: rgb(241, 6, 6); */
+    height: 100px;
     width: 150px;
-    margin: 10px;
+    margin:40px;
     padding: 5px;
 }
 
 .direita {
-    background-color: blue;
-    height: 80px;
+    /* background-color: blue; */
+    height: 100px;
     width: 150px;
-    margin: 10px;
+    margin: 40px;
     padding: 5px;
 }
 
