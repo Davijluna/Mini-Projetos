@@ -41,7 +41,6 @@ const App: React.FC = () => {
         <br />
       <main>
         <div className="App">
-            <ul>
               {products.map(product => (
                 <div className='celulaProduto' key={product.id}>
                   <img src={product.photo} alt={product.name} style={{ width: '100px', height: '100px' }} />
@@ -53,7 +52,6 @@ const App: React.FC = () => {
                   <ButtonFooter/>
                 </div>
               ))}
-            </ul>
         </div>
       </main>
       <footer>
