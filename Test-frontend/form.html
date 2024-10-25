@@ -8,7 +8,8 @@
 </head>
 <body>
   <div class="formulario">
-    <form id="cadastro" action="post">
+    <form onsubmit="" id="cadastro" action="post">
+      <h1 >Simulador</h1>
       <!-- nome, mensalidade, tempo de contribuição  -->
       <label for="nome">Nome
         <input id="nome" type="text" placeholder="Digite seu nome" class="length" name="nome">
@@ -19,18 +20,18 @@
       </label>
       <br>
       <br>
-      <label  for="temp">Tempo de contribuição
+      <label onsubmit="cadastroForm()"  for="temp">Tempo
        <select name="temp" id="temp">
         <option value="1ano">1 ano</option>
-        <option value="2anos">2 anos</option>
-        <option value="3anos">3 anos</option>
-        <option value="4anos">4 anos</option>
-        <option value="5anos">5 anos</option>
-        <option value="6anos">6 anos</option>
+        <option value="2anos">2 ano</option>
+        <option value="3anos">3 ano</option>
+        <option value="4anos">4 ano</option>
+        <option value="5anos">5 ano</option>
+        <option value="6anos">6 ano</option>
        </select>
       </label>
       <br>
-      <button onclick="cadastroForm()" type="menu" >Simular</button>
+      <button type="button" id="btn-textn">Simular</button>
     </form>
   </div>
 
