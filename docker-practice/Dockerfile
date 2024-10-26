@@ -1,5 +1,5 @@
 # Definindo a imagem da aplicação
-FROM node:16-alpine 
+FROM node:16-alpine
 
 # definindo o diretório de trabalho. onde eu quero salvar 
 WORKDIR /app
