@@ -1,0 +1,34 @@
+João da Silva
+Endereço: Rua das Flores, 123, São Paulo, SP, 01234-567
+Telefone: (11) 91234-5678
+E-mail: joaodasilva@email.com
+
+Objetivo
+Profissional da área de Tecnologia da Informação, com experiência em desenvolvimento de software e automação de processos, buscando oportunidade para contribuir com minhas habilidades em programação e análise de sistemas.
+
+Experiência Profissional
+
+Desenvolvedor de Software
+Tech Solutions Ltda — Jan/2022 até o momento
+
+Desenvolvimento de aplicações web em Python e JavaScript, focando na melhoria da experiência do usuário e na otimização de processos.
+Implementação de soluções de automação que aumentaram a eficiência em 30% nos processos internos da empresa.
+Analista de Suporte Técnico
+GlobalTech — Fev/2020 até Dez/2021
+
+Atendimento ao cliente e resolução de problemas técnicos, com índice de satisfação superior a 90%.
+Colaboração com a equipe de desenvolvimento para melhorar funcionalidades dos sistemas com base no feedback dos usuários.
+Formação Acadêmica
+
+Bacharelado em Ciência da Computação
+Universidade Federal de São Paulo — Conclusão em 2020
+
+Habilidades
+
+Programação em Python e JavaScript
+Banco de Dados (SQL, MongoDB)
+Trabalho em equipe e resolução de problemas
+Idiomas
+
+Inglês — Avançado
+Espanhol — Intermediário
