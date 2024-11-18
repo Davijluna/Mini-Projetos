@@ -35,10 +35,21 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 
 # ESTIMANDO CALORIAS DE PRATOS A PARTIR DE IMAGENS
 
-food_plate = genai.upload_file(
-    path="prato-de-comida.png"
-)
+# food_plate = genai.upload_file(
+#     path="prato-de-comida.png"
+# )
+# prompt = "Pode indentificar com cuidado o que é servido nesse prato e estimar grosseiramente as suas calorias?"
+# response = model.generate_content([food_plate, prompt])
+# print(response.text)
 
-prompt = "Pode indentificar com cuidado o que é servido nesse prato e estimar grosseiramente as suas calorias?"
-response = model.generate_content([food_plate, prompt])
+
+# GERANDO DESCRIÇÕES PARA POSTAGENS EM REDES SOCIAS
+vacation_image = genai.upload_file(
+    path="social_media_viagem.png"
+)
+prompt = (
+    "Pode gerar uma descrição dessa imagem para o Instagram? Quero algo para escrever no post e uma descrição da imagem para fins de acessibilidade."    
+)
+response = model.generate_content([vacation_image, prompt])
+
 print(response.text)
