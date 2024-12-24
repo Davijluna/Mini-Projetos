@@ -1,3 +1,4 @@
 node_modules
 senha.txt
+package-lock.json
 .env
