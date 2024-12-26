@@ -14,11 +14,13 @@ chat = model.start_chat()
 # Envie uma mensagem para o chat
 response = chat.send_message("Você é um consultor de projetos e amigo para quem quer aprender.")
 
+# Envie uma mensagem e obtenha respostas:
 def gradio_wrapper(message, _history):
+    import pdb; pdb.set_trace()
     response = chat.send_message(message)
     return response.text
 # Exiba a resposta
 print(response.text)
 
-chatInterface = gr.ChatInterface(gradio_wrapper)
+chatInterface = gr.ChatInterface(fn=gradio_wrapper, multimodal=True)
 chatInterface.launch()
