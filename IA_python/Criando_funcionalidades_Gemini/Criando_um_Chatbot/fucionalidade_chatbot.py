@@ -1,6 +1,6 @@
 import google.generativeai as genai
 import os
-import gradio as gr
+import gradio
 
 # Configure a chave de API
 GOOGLE_API_KEY = os.environ["GEMINI_API"]
@@ -16,11 +16,22 @@ response = chat.send_message("Você é um consultor de projetos e amigo para que
 
 # Envie uma mensagem e obtenha respostas:
 def gradio_wrapper(message, _history):
-    import pdb; pdb.set_trace()
-    response = chat.send_message(message)
+    text = message["text"]
+    uploaded_files = []
+    # import pdb; pdb.set_trace()
+
+    for files_info in message["files"]:
+        file_path = files_info["path"]
+        uploaded_file_info = genai.upload_file(file_path)
+        # import pdb; pdb.set_trace()
+        uploaded_files.append(uploaded_file_info)
+
+    prompt = [message["text"]]
+    prompt.extend(uploaded_files)
+    response = chat.send_message(prompt)
     return response.text
 # Exiba a resposta
-print(response.text)
+# print(response.text)
 
-chatInterface = gr.ChatInterface(fn=gradio_wrapper, multimodal=True)
+chatInterface = gradio.ChatInterface(fn=gradio_wrapper, multimodal=True)
 chatInterface.launch()
