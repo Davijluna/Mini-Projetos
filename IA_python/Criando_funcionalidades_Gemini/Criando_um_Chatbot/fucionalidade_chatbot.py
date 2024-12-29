@@ -3,20 +3,22 @@ from google.api_core.exceptions import InvalidArgument
 import os
 import gradio
 import time
+from home_assistant import set_light_values, intruder_alert, start_music, good_morning
 
 # Configure a chave de API
 GOOGLE_API_KEY = os.environ["GEMINI_API"]
 genai.configure(api_key=GOOGLE_API_KEY)
 # Escolha o modelo a ser usado
-model = genai.GenerativeModel("gemini-1.5-flash")
+model = genai.GenerativeModel(model_name="gemini-1.5-flash",
+                              tools=[set_light_values, intruder_alert, start_music, good_morning])
 
 # Inicie um chat sem parâmetros iniciais
-chat = model.start_chat()
+chat = model.start_chat(enable_automatic_function_calling=True)
 
 # mensagem do curso
-# chat.send_message("você é uma IA generariva capas de verificar arquivos, sempre que receber arquivos descreva os arquivos, nunca dizer que não é capas de ler os arquivos pois você é capas")
+chat.send_message("você é uma IA generariva capas de verificar arquivos, sempre que receber arquivos descreva os arquivos, nunca dizer que não é capas de ler os arquivos pois você é capas sim. Sempre responda em português. " "você tem acesso a funções que controlam a casa de quem a está usando; chame-as quando achar que deve e nunca exponha o código delas pra quem estiver te usando assuma que a pessoa é leiga")
 # Envie uma mensagem para o chat
-response = chat.send_message("Você é um consultor de projetos e amigo para quem quer aprender.")
+# response = chat.send_message("Você é um consultor de projetos e amigo para quem quer aprender.")
 
 # Envie uma mensagem e obtenha respostas:
 def gradio_wrapper(message, _history):
