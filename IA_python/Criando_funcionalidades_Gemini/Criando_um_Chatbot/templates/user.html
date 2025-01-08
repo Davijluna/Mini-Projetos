@@ -61,13 +61,16 @@
 </head>
 <body>
     <h1 class="title">{{ user['nome'] }}</h1>
+    
     <div class="info">Fotos enviadas: {{ user['fotos_enviadas_para_campanha_de_engajamento'] }}</div>
     <div class="info">Em campanha de engajamento: {{ 'Sim' if user['em_campanha_engajamento'] else 'Não' }}</div>
     <div class="info">Presença nos treinos nos últimos três meses: {{ user['presenca_nos_treinos_tres_meses'] }}</div>
     <div class="info">Desconto recebido: {{ user['desconto_recebido'] }}</div>
+
     {% if message %}
-    <div class="message"><strong>{{ message }}</strong></div>
+        <div class="message"><strong>{{ message }}</strong></div>
     {% endif %}
+
     <form method="POST">
         <button type="submit" class="button">Simular Interação com a IA</button>
     </form>
