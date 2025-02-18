@@ -1,5 +1,5 @@
-let valor = {}
 
+let info = JSON.parse(localStorage.getItem("pessoa")) || [];
 
 document.querySelector("form").addEventListener("submit", function(event){
     event.preventDefault()
@@ -8,19 +8,17 @@ document.querySelector("form").addEventListener("submit", function(event){
     let inputEmail = document.getElementById("email").value;
     let inputIdade = document.getElementById("idade").value;
 
-    let info;
-
-    if (info === '')
-
-    info += inputNome
-    info += inputEmail
-    info += inputIdade
-
-    valor = info
-    
-    console.log(inputNome)
-    console.log(inputEmail)
-    console.log(inputIdade)
+    let pessoa = { nome: inputNome, idade: inputIdade, email: inputEmail}
+    localStorage.setItem("pessoa", JSON.stringify(info))
+    info.push(pessoa)
+    // DICA NÃO É UM ARRAY, POR CONTA DISSO NÃO ESTÁ FUNCIONANDO 
+    // 1. PREOCURAR UMA FUNÇÃO QUE POSSA LIDAR COM UM OBJETO PARA ADICIONAR AS VALORES
+    alert("Informações salvas !!!!")
 })
 
-console.log(valor)
+
+function mostrarDados () {
+    // alert("teste")
+    let dados = JSON.parse(localStorage.getItem("pessoa"))
+    console.log(typeof dados)
+}
