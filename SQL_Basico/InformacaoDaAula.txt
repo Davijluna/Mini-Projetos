@@ -1,0 +1,48 @@
+SQL = É uma linguagem de programação para manupular o banco de dados
+
+query = É uma consulta ao banco de dados.
+
+Já o MySQL, SQL Server, Oracle Database e PostgreSQL são propramas
+ utilizados para gerenciamento dos bancos de dados.
+ 
+
+ https://www.youtube.com/watch?v=UJ3ljw5uuEM&list=PLpdAy0tYrnKw_F8v6kkEXTeyE33Navv-K&index=2
+
+
+ SELECT = Seleciona todas as colunas e todas as linhas de uma tabela.
+    SELECT * FROM Tabela;
+
+    SELECT col1, col2 FROM Tabela;
+
+    Vamos imaginar que queremos mudar os nomes das colunas:
+nesse caso utilizamos o AS.
+    SELECT
+        Col1 AS "coluna 1",
+        Col2 SA "coluna 2"
+    FROM Tabela;
+
+Selecionando as colunas da tabelas com um limite para exibir;
+
+    SELECT
+        *
+    FROM Tabela
+    LIMIT 2;
+
+ORDER BY
+
+Permite selecionar uma tabela ordenando as informações apartir de uma coluna
+
+    SELECT 
+        *
+    FROM Tabela         "seleciona de forma ascendente"
+    ORDER BY Col3;
+
+    SELECT 
+        *
+    FROM Tabela         "seleciona de forma descendente"
+    ORDER BY Col3 DESC;
+
+
+NÃO ESQUECER DO PONTO E VIRGULA PARA O MYSQL SABER ONDE TERMINA O COMANDO DE EXECUÇÃO
+
+
