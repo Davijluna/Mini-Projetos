@@ -8,9 +8,10 @@ document.querySelector("form").addEventListener("submit", function(event){
     let inputEmail = document.getElementById("email").value;
     let inputIdade = document.getElementById("idade").value;
 
-    let pessoa = { nome: inputNome, idade: inputIdade, email: inputEmail}
-    localStorage.setItem("pessoa", JSON.stringify(info))
-    info.push(pessoa)
+    let pessoa =[ { nome: inputNome, idade: inputIdade, email: inputEmail}]
+    // localStorage.setItem("pessoa", JSON.stringify(info))
+    // info.push(pessoa)
+    console.log(typeof pessoa[0])
     // DICA NÃO É UM ARRAY, POR CONTA DISSO NÃO ESTÁ FUNCIONANDO 
     // 1. PREOCURAR UMA FUNÇÃO QUE POSSA LIDAR COM UM OBJETO PARA ADICIONAR AS VALORES
     alert("Informações salvas !!!!")
