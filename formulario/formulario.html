@@ -11,24 +11,32 @@
 
     <form action="get">
 
-        <label for="nome"> Nome:
+        <label for="name"> Nome:
             <input type="texr" name="nome" id="name" placeholder="Digite seu nome">
         </label>
 
         <br><br>
 
-        <label for="idade"> Idade:
+        <label for="age"> Idade:
             <input type="number" name="idade" id="age" placeholder="Digite sua idade">
         </label>
 
         <!-- contatos  -->
         <br><br>
-        <label for="telefone"> Telefone:
+        <label for="phone"> Telefone:
             <input type="number" name="telefone" id="phone" placeholder="Seu telefone">
         </label>
         <label for="email"> e-mail:
             <input type="email" name="e-mail" id="email" placeholder="Seu e-mail">
         </label>
+        <br>
+        <br>
+        <hr>
+        <button type="button" onclick="salvar()">Salvar</button>
+        <button type="button" onclick="carregar()">Carregar</button>
+        <button type="button" onclick="remover()">Remover</button>
+        
     </form>
+    <script src="scriptLocalstorege.js"></script>
 </body>
 </html>

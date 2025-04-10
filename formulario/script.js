@@ -8,7 +8,7 @@ document.querySelector("form").addEventListener("submit", function(event){
     let inputEmail = document.getElementById("email").value;
     let inputIdade = document.getElementById("idade").value;
 
-    let pessoa =[ { nome: inputNome, idade: inputIdade, email: inputEmail}]
+    let pessoa =[{ nome: inputNome, idade: inputIdade, email: inputEmail}]
     // localStorage.setItem("pessoa", JSON.stringify(info))
     // info.push(pessoa)
     console.log(typeof pessoa[0])
