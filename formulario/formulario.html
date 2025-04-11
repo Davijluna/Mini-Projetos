@@ -3,40 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>formulario</title>
+    <title>formulário</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <title>Formulário de identificaçãp</title>
-    <br><br>
+    <div>
 
-    <form action="get">
-
-        <label for="name"> Nome:
-            <input type="texr" name="nome" id="name" placeholder="Digite seu nome">
-        </label>
-
-        <br><br>
-
-        <label for="age"> Idade:
-            <input type="number" name="idade" id="age" placeholder="Digite sua idade">
-        </label>
-
-        <!-- contatos  -->
-        <br><br>
-        <label for="phone"> Telefone:
-            <input type="number" name="telefone" id="phone" placeholder="Seu telefone">
-        </label>
-        <label for="email"> e-mail:
-            <input type="email" name="e-mail" id="email" placeholder="Seu e-mail">
-        </label>
-        <br>
-        <br>
-        <hr>
-        <button type="button" onclick="salvar()">Salvar</button>
-        <button type="button" onclick="carregar()">Carregar</button>
-        <button type="button" onclick="remover()">Remover</button>
-        
-    </form>
+        <h1>Formulário de identificação</h1>
+            <br>
+            
+            <form action="get">
+                
+                    <label for="name"> Nome:
+                        <input type="texr" name="nome" id="name" placeholder="Digite seu nome">
+                    </label>
+                    
+                
+                    
+                    <label for="age"> Idade:
+                        <input type="number" name="idade" id="age" placeholder="Digite sua idade">
+                    </label>
+                
+                <!-- contatos  -->
+                    <br><br>
+                    <label for="phone"> Telefone:
+                        <input type="number" name="telefone" id="phone" placeholder="Seu telefone">
+                    </label>
+                    <label for="email"> e-mail:
+                        <input type="email" name="e-mail" id="email" placeholder="Seu e-mail">
+                    </label>
+                    <br>
+                    <br>
+                    <hr>
+                    <button type="button" onclick="salvar()">Salvar</button>
+                    <button type="button" onclick="carregar()">Carregar</button>
+                    <button type="button" onclick="remover()">Remover</button>
+            
+            </form>
+</div>
     <script src="scriptLocalstorege.js"></script>
 </body>
 </html>
