@@ -1,0 +1,15 @@
+body {
+    border: 0;
+}
+
+div {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+/* align-items: center;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content:center; */
