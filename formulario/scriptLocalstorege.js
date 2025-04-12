@@ -17,6 +17,7 @@ function remover() {
     }
     localStorage.clear()
     location.reload()
+    location.reload()
 }
 
 console.log(nome)
