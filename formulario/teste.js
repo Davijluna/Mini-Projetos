@@ -2,14 +2,8 @@
 
 let letra = "Davi"
 function lastLetter(letter) {
-
-   let letterTest = letter
-      let letterString;
-      for (i = 0; i < letterTest.length; i += 1) {
-         lastLetter = letterTest[i]
-      }
+   for (i = 0; i < letter.length; i += 1) lastLetter = letter[i]
       console.log(lastLetter)
- 
 }
 
 lastLetter(letra)
