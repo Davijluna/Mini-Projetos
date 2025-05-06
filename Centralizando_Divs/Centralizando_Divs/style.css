@@ -1,0 +1,38 @@
+
+/* UTILIZANDO FLEX */
+/* .parent {
+    display: flex;
+    background-color: gray;
+    height: 400px;
+    width: 400px;    
+
+}
+j
+.child {
+    background-color: green;
+    height: 50px;
+    width: 50px;
+    margin: auto;
+
+} */
+
+/* UTILIZANDO JUSTIFY CONTENT */
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    height: 400px;
+    width: 400px;
+
+}
+
+.child {
+    background-color: green;
+    height: 50px;
+    width: 50px;
+    
+
+}
+
+
