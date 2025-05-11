@@ -1,0 +1,4 @@
+Tarefas:
+Criar um chatbot que atua como um assistente de receitas culinárias.
+Implementar uma interface gráfica simples usando o Gradio.
+Testar o chatbot fazendo perguntas relacionadas a receitas e dicas culinárias.

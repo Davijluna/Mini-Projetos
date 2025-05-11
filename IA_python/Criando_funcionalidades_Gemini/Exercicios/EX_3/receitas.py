@@ -8,3 +8,11 @@ genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 
+
+food_plate = genai.upload_file(
+    path="pratos"
+)
+
+prompt = ""
+
+
