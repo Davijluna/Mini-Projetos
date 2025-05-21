@@ -10,9 +10,11 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 
 
 food_plate = genai.upload_file(
-    path="pratos"
+    path="pratos.jpeg"
 )
 
-prompt = ""
+prompt = ("Pode gerar uma descrição de uma receita com esse ingrediente?")
 
+response = model.generate_content([food_plate, prompt])
 
+print(response.text)

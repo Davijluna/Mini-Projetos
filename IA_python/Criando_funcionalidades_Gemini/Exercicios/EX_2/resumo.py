@@ -2,6 +2,7 @@
 
 import google.generativeai as genai
 import os
+import gradio
 import PyPDF2
 
 
