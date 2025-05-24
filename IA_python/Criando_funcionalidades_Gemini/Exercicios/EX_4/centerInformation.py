@@ -6,7 +6,7 @@ import os
 import gradio
 import time
 
-from assistentHome import set_light_values, intruder_alert, start_music, good_morning, set_thermostat_temperature, coffeExpress
+from assistentHome import set_light_values, intruder_alert, start_music, good_morning, set_thermostat_temperature, coffeExpress, open_curtains
 
 # Configuração API
 GOOGLE_API_KEY = os.environ["GEMINI_API"]
@@ -14,7 +14,7 @@ genai.configure(api_key=GOOGLE_API_KEY)
 
 # Escohendo o modelo a ser usado 
 model = genai.GenerativeModel(model_name="gemini-1.5-flash", 
-                             tools=[set_light_values, intruder_alert, start_music, good_morning, set_thermostat_temperature, coffeExpress])
+                             tools=[set_light_values, intruder_alert, start_music, good_morning, set_thermostat_temperature, coffeExpress, open_curtains])
 
 # inicia um chat sem parâmetros iniciais.
 chat = model.start_chat(enable_automatic_function_calling=True)

@@ -39,5 +39,10 @@ def coffeExpress(coffe: str) -> dict:
     print("Café está pronto !!!")
     return{"tipo de café": coffe}
 
+def open_curtains(cutains: str) -> dict:
+
+    print("Cortinas abertas .")
+    return {"Cortina aberta.": cutains}
+
     
-__all__ = ["set_light_values", "intruder_alert", "start_music", "good_morning", "set_thermostat_temperature", "coffeExpress" ]
+__all__ = ["set_light_values", "intruder_alert", "start_music", "good_morning", "set_thermostat_temperature", "coffeExpress", "open_curtains" ]
