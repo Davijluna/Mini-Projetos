@@ -9,8 +9,13 @@ int main() {
     printf("Digite seu nome: ");
     scanf("%s", nome);
 
-    printf("Digite sua idade: ");
+    printf("Ola %s digite sua idade: ", nome);
     scanf("%d", &idade);
+
+      if (idade <= 0) {
+        printf("Idade é válida.");
+        return (0);
+    }
 
     if (idade <= 18) {
         mensalidade = 50.00;
