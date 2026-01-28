@@ -13,10 +13,10 @@ int main() {
     scanf("%d", &idade);
 
       if (idade <= 0) {
-        printf("Idade é válida.");
+        printf("Idade é inválida.");
         return (0);
     }
-
+// Fazer atualização no "scanf" para "fgets"
     if (idade <= 18) {
         mensalidade = 50.00;
     }
